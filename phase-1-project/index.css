@@ -1,0 +1,42 @@
+ /* img {
+    max-width: 50%;
+    height: auto;   
+    display: flex;   
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+}  */
+body.dark{
+    background-color: #292c35;
+}
+/* .label{
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+    position: relative;
+}
+h1{
+    position: center;
+}
+img{
+    position: relative;;
+} */
+h1{
+    color:darkorchid;
+    padding:5px;
+    border:50px;
+    border-color:black;
+    border-radius:10px;
+    position:center;
+}
+div{
+    color:darkorchid
+}

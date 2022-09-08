@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phase 1 project</title>
+</head>
+<body>
+    <h1 id="h1" color:red>Cat thesarus</h1>
+<div>
+<input type="checkbox" class="checkbox" id="checkbox"> Dark/light
+<label for="checkbox">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <div class="ball"></div>
+</label>    
+</div>
+
+</html>
+<select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector"></select>
+<!-- <button id="random" value="random"> Choose random cat</button> -->
+<button id="meow" value="meow">click for a suprise</button>
+</body>
+<script src="index.js" ></script>
+<link rel="stylesheet" id="cssfile" href="index.css">
+<div>
+    
+<a id="wiki_link" target="_blank"></a>
+<div id="breed_json"></div>
+</div>
+
+<div>
+<img id="breed_image"></img>
+</div>
+  <audio onclick= "PlaySound" id="audio" src="https://freesound.org/data/previews/232/232343_3032944-lq.mp3" value="PLAY"></audio>
