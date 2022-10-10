@@ -9,6 +9,27 @@ let storedBreeds = []
 
 
 //fetch the api
+
+
+const fetchApi = () => {
+    return fetch(url)
+    .then(res=>res.json)
+    .then((data) =>data.filer(img.image?.url!=null))
+    storedBreeds = data;
+
+
+
+}
+fetchApi()
+
+
+
+
+
+
+
+
+
  fetch(url, {
     headers: {
       'x-api-key': api_key
@@ -17,19 +38,19 @@ let storedBreeds = []
    return response.json();
  })
 .then((data) => {
-    // filter 
+
    data = data.filter(img=> img.image?.url!=null)
   
   storedBreeds = data;
 
-   for (let i = 0; i < storedBreeds.length; i++) {
-    const breed = storedBreeds[i];
-    let option = document.createElement('option');
+//    for (let i = 0; i < storedBreeds.length; i++) {
+//     const breed = storedBreeds[i];
+//     let option = document.createElement('option');
      
-     if(!breed.image)continue
+//      if(!breed.image)continue
      
-    option.value = i;
-    option.innerHTML = `${breed.name}`;
+//     option.value = i;
+//     option.innerHTML = `${breed.name}`;
 
 document.getElementById('breed_selector').appendChild(option);
     
@@ -88,3 +109,6 @@ like.addEventListener('click', () => {
     }
     onClick()
 })
+
+
+
