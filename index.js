@@ -18,6 +18,9 @@ const fetchApi = () => {
     storedBreeds = data;
 
 
+    option.value = i;
+    option.innerHTML = `${breed.name}`;
+    document.getElementById('breed_selector').appendChild(option);
 
 }
 fetchApi()
