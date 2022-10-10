@@ -17,7 +17,9 @@ const fetchApi = () => {
     .then((data) =>data.filer(img.image?.url!=null))
     storedBreeds = data;
 
-
+    option.value = i;
+    option.innerHTML = `${breed.name}`;
+    document.getElementById('breed_selector').appendChild(option);
    
 }
 fetchApi()
