@@ -2,8 +2,8 @@
 /* fix drop down menu*/
 
 const api_key='DEMO_API_KEY'
-const url = `https://api.thecatapi.com/v1/breeds`;
-
+const url = `https://api.thecatapi.com/v1/breeds/`;
+const fullApi = url + api_key
 
 let storedBreeds = []
 
@@ -11,17 +11,29 @@ let storedBreeds = []
 //fetch the api
 
 
-const fetchApi = () => {
-    return fetch(url)
-    .then(res=>res.json)
-    .then((data) =>data.filer(img.image?.url!=null))
-    storedBreeds = data;
+// const fetchApi = () => {
+//     return fetch(fullApi)
+//     .then(res=>res.json)
+//     .then((data) =>data.filer(img.image?.url!=null))
+//     storedBreeds = data
+    
 
-    option.value = i;
-    option.innerHTML = `${breed.name}`;
-    document.getElementById('breed_selector').appendChild(option);
-   
-}
+//     option.value = i;
+//     option.innerHTML = `${breed.name}`;
+
+//     document.getElementById('breed_selector').appendChild(option);
+
+//     let option = document.createElement('option')
+//     const breed =storedBreeds.filter(function(breed){
+//       if (!breed.image === true)
+//       return breed
+//         let option = document.createElement('option')
+
+//     })
+//     .catch(error)
+//         console.log(error)
+    
+// }
 fetchApi()
 
 
@@ -30,7 +42,7 @@ fetchApi()
 
 
 
-
+const fetchApi = () =>  {
 
  fetch(url, {
     headers: {
@@ -45,14 +57,17 @@ fetchApi()
   
   storedBreeds = data;
 
-//    for (let i = 0; i < storedBreeds.length; i++) {
-//     const breed = storedBreeds[i];
-//     let option = document.createElement('option');
+
+
+
+   for (let i = 0; i < storedBreeds.length; i++) {
+    const breed = storedBreeds[i];
+    let option = document.createElement('option');
      
-//      if(!breed.image)continue
+     if(!breed.image)continue
      
-//     option.value = i;
-//     option.innerHTML = `${breed.name}`;
+    option.value = i;
+    option.innerHTML = `${breed.name}`;
 
 document.getElementById('breed_selector').appendChild(option);
     
@@ -63,7 +78,9 @@ document.getElementById('breed_selector').appendChild(option);
 })
 .catch(function(error) {
    console.log(error);
-});
+}); }
+
+fetchApi()
 
 function showBreedImage(index)
 { 
