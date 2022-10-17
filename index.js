@@ -7,33 +7,6 @@ const fullApi = url + api_key
 
 let storedBreeds = []
 
-
-//fetch the api
-
-
-// const fetchApi = () => {
-//     return fetch(fullApi)
-//     .then(res=>res.json)
-//     .then((data) =>data.filer(img.image?.url!=null))
-//     storedBreeds = data
-    
-
-//     option.value = i;
-//     option.innerHTML = `${breed.name}`;
-
-//     document.getElementById('breed_selector').appendChild(option);
-
-//     let option = document.createElement('option')
-//     const breed =storedBreeds.filter(function(breed){
-//       if (!breed.image === true)
-//       return breed
-//         let option = document.createElement('option')
-
-//     })
-//     .catch(error)
-//         console.log(error)
-    
-// }
 fetchApi()
 
 
