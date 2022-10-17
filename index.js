@@ -10,11 +10,6 @@ let storedBreeds = []
 fetchApi()
 
 
-
-
-
-
-
 const fetchApi = () =>  {
 
  fetch(url, {
@@ -51,7 +46,7 @@ document.getElementById('breed_selector').appendChild(option);
 })
 .catch(function(error) {
    console.log(error);
-}); }
+});
 
 fetchApi()
 
@@ -75,10 +70,7 @@ checkBox.addEventListener('change',()=> {
 }
 changeMode()
 
-
-
 // all event listeners
-
 
 //plays meow sound on button click
 const audio= new Audio('https://freesound.org/data/previews/232/232343_3032944-lq.mp3');
@@ -87,11 +79,14 @@ meow.addEventListener('click',(e)=>{
     audio.play()
     e.preventDefault()
 })
+// secret popup
 const title= document.getElementById('h1')
 title.addEventListener('mouseover',()=>{
     // console.log('hello')
     alert('You found a secret!!! 🥳🥳🥳')
 })
+
+//like button
 clicks = 0
 const like = document.getElementById('like')
 like.addEventListener('click', () => {
