@@ -26,8 +26,6 @@ const fetchApi = () =>  {
   storedBreeds = data;
 
 
-
-
    for (let i = 0; i < storedBreeds.length; i++) {
     const breed = storedBreeds[i];
     let option = document.createElement('option');
