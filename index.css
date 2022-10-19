@@ -1,26 +1,7 @@
- /* img {
-    max-width: 50%;
-    height: auto;   
-    display: flex;   
-}
-
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin: 0;
-}  */
 body.dark{
     background-color: #292c35;
 }
-/* 
-}
-h1{
-    position: center;
-}
-*/
+
 img{
     position: relative;;
     size:75%
