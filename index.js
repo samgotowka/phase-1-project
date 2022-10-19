@@ -35,14 +35,7 @@ storedBreeds.forEach((breed, i) => {
 })
 })
 }
-//    for (let i = 0; i < storedBreeds.length; i++) {
-//     const breed = storedBreeds[i];
-//     let option = document.createElement('option');
-     
-//      if(!breed.image)continue
-     
-//     option.value = i;
-//     option.innerHTML = `${breed.name}`;
+
 
 // document.getElementById('breed_selector').appendChild(option);
     
@@ -117,4 +110,3 @@ function incLikes(){
     }
     onClick()
 }
-//hello
