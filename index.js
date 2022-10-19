@@ -36,13 +36,7 @@ storedBreeds.forEach((breed, i) => {
     })
 }
 
-//    showBreedImage(0)
 
-// })
-// .catch(function(error) {
-//    console.log(error);
-// });
-// }
 fetchApi()
 
 function showBreedImage(index)
