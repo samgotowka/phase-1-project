@@ -1,13 +1,8 @@
-
-/* fix drop down menu*/
-
 const api_key='DEMO_API_KEY'
 const url = `https://api.thecatapi.com/v1/breeds/`;
 const fullApi = url + api_key
 
 let storedBreeds = []
-
-
 
 const fetchApi = () =>  {
 
@@ -35,7 +30,6 @@ storedBreeds.forEach((breed, i) => {
 })
     })
 }
-
 
 fetchApi()
 
