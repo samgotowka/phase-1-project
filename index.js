@@ -26,18 +26,15 @@ const fetchApi = () =>  {
 
 storedBreeds.forEach((breed, i) => {
  let option = document.createElement('option')
- if(breed.image){
- option.value = i
- option.innerHTML=`${breed.name}`
- }
+    if(breed.image){
+    option.value = i
+    option.innerHTML=`${breed.name}`
+    }
  document.getElementById('breed_selector').appendChild(option)
  showBreedImage(0)
 })
-})
+    })
 }
-
-    
-//     }
 
 //    showBreedImage(0)
 
@@ -58,11 +55,11 @@ function showBreedImage(index)
 
 // change dark/light mode
 function changeMode(event){
-const checkBox= document.getElementById('checkbox')
-checkBox.addEventListener('change',()=> {
+    const checkBox= document.getElementById('checkbox')
+    checkBox.addEventListener('change',()=> {
     if(!checkBox.checked){
     }
-    document.body.classList.toggle('dark')  
+document.body.classList.toggle('dark')  
 
 })
 }
