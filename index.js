@@ -36,8 +36,6 @@ storedBreeds.forEach((breed, i) => {
 })
 }
 
-
-// document.getElementById('breed_selector').appendChild(option);
     
 //     }
 
