@@ -7,7 +7,6 @@ const fullApi = url + api_key
 
 let storedBreeds = []
 
-fetchApi()
 
 
 const fetchApi = () =>  {
@@ -22,30 +21,40 @@ const fetchApi = () =>  {
 .then((data) => {
 
    data = data.filter(img=> img.image?.url!=null)
-  
+
   storedBreeds = data;
 
-
-   for (let i = 0; i < storedBreeds.length; i++) {
-    const breed = storedBreeds[i];
-    let option = document.createElement('option');
-     
-     if(!breed.image)continue
-     
-    option.value = i;
-    option.innerHTML = `${breed.name}`;
-
-document.getElementById('breed_selector').appendChild(option);
-    
-    }
-
-   showBreedImage(0)
-
+storedBreeds.forEach((breed, i) => {
+ let option = document.createElement('option')
+ if(breed.image){
+ option.value = i
+ option.innerHTML=`${breed.name}`
+ }
+ document.getElementById('breed_selector').appendChild(option)
+ showBreedImage(0)
 })
-.catch(function(error) {
-   console.log(error);
-});
+})
+}
+//    for (let i = 0; i < storedBreeds.length; i++) {
+//     const breed = storedBreeds[i];
+//     let option = document.createElement('option');
+     
+//      if(!breed.image)continue
+     
+//     option.value = i;
+//     option.innerHTML = `${breed.name}`;
 
+// document.getElementById('breed_selector').appendChild(option);
+    
+//     }
+
+//    showBreedImage(0)
+
+// })
+// .catch(function(error) {
+//    console.log(error);
+// });
+// }
 fetchApi()
 
 function showBreedImage(index)
@@ -71,29 +80,40 @@ changeMode()
 // all event listeners
 
 //plays meow sound on button click
-const audio= new Audio('https://freesound.org/data/previews/232/232343_3032944-lq.mp3');
-const meow = document.getElementById('meow')
-meow.addEventListener('click',(e)=>{
-    audio.play()
-    e.preventDefault()
-})
-// secret popup
-const title= document.getElementById('h1')
-title.addEventListener('mouseover',()=>{
-    // console.log('hello')
-    alert('You found a secret!!! 🥳🥳🥳')
-})
+function playSound(){
+    const audio= new Audio('https://freesound.org/data/previews/232/232343_3032944-lq.mp3');
+    const meow = document.getElementById('meow')
+        meow.addEventListener('click',(e)=>{
+            audio.play()
+            e.preventDefault()
+        })
+}
+playSound()
 
-//like button
+// secret popup
+function popUp(){
+const title= document.getElementById('h1')
+title.addEventListener('mouseover', alertMe()
+)}
+popUp()
+//like
+function likeButton(){
 clicks = 0
 const like = document.getElementById('like')
-like.addEventListener('click', () => {
+like.addEventListener('click', incLikes()
+)}
+likeButton()
+
+//callback for popUp()
+function alertMe(){
+    alert('You found a secret!!! 🥳🥳🥳')
+};
+
+//callback for likeButton()
+function incLikes(){
     function onClick(){
-        clicks ++
+        clicks++
         like.innerHTML= '❤️ ' +clicks
     }
     onClick()
-})
-
-
-
+}
