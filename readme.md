@@ -1,5 +1,4 @@
-                                                                   
-                                                                   # /ᐠ｡ꞈ｡ᐟ\
+#                                                                                /ᐠ｡ꞈ｡ᐟ\
 ### README 
   * My phase 1 project is designed for you to choose a specific cat that you want to look and have it display a picture of it along side with some of the characteristics of the cat.
   
