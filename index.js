@@ -68,15 +68,15 @@ playSound()
 
 // secret popup
 function popUp(){
-const title= document.getElementById('h1')
-title.addEventListener('mouseover', alertMe()
+ const title= document.getElementById('h1')
+ title.addEventListener('mouseover', alertMe()
 )}
 popUp()
 //like
 function likeButton(){
-clicks = 0
-const like = document.getElementById('like')
-like.addEventListener('click', incLikes()
+ clicks = 0
+ const like = document.getElementById('like')
+ like.addEventListener('click', incLikes()
 )}
 likeButton()
 
