@@ -6,19 +6,16 @@ let storedBreeds = []
 
 const fetchApi = () =>  {
 
- fetch(url, {
-    headers: {
-      'x-api-key': api_key
-    }})
- .then((response) => {
-   return response.json();
+fetch(url, {
+   headers: {
+     'x-api-key': api_key
+   }})
+.then((response) => {
+  return response.json();
  })
 .then((data) => {
-
-   data = data.filter(img=> img.image?.url!=null)
-
-  storedBreeds = data;
-
+data = data.filter(img=> img.image?.url!=null)
+storedBreeds = data;
 storedBreeds.forEach((breed, i) => {
  let option = document.createElement('option')
     if(breed.image){
